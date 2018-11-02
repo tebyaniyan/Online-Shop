@@ -1,0 +1,157 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    <title>Untitled Page</title>
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+    </style>
+</head>
+<body bgcolor="#DDEEFF">
+    <form id="form1" runat="server">
+    <div align="center" dir="rtl" style="font-family: tahoma">
+    
+        
+        <table width="1000px">
+            <tr>
+                <td>
+                    <img alt="" src="image/header_bg.jpg" />
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <div align="left" dir="rtl" style="font-family: tahoma">
+                        <asp:LinkButton ID="LinkButton1" runat="server" Font-Underline="False" 
+                            PostBackUrl="~/Default.aspx">صفحه اصلی</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:LinkButton ID="LinkButton2" runat="server" Font-Underline="False" 
+                            PostBackUrl="~/about.aspx">درباره 
+                        سایت</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:LinkButton ID="LinkButton3" runat="server" Font-Underline="False" 
+                            PostBackUrl="~/product.aspx">محصولات</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:LinkButton ID="LinkButton4" runat="server" Font-Underline="False" 
+                            PostBackUrl="~/news.aspx">اخبار</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:LinkButton ID="LinkButton13" runat="server" Font-Underline="False" 
+                            PostBackUrl="~/Register.aspx">عضویت</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:LinkButton ID="LinkButton6" runat="server" Font-Underline="False">تماس با 
+                        ما</asp:LinkButton>
+                    </div>
+                    </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="style1">
+                        <tr>
+                            <td width="196">
+                                <table class="style1">
+                                    <tr>
+                                        <td>
+                                            <img alt="" src="image/menu_title_bg.gif" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:Menu ID="Menu1" runat="server" Width="100%">
+                                                <Items>
+                                                    <asp:MenuItem Text="موبایل" Value="موبایل"></asp:MenuItem>
+                                                    <asp:MenuItem Text="نوت بوک" Value="دسته 2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="دوربین" Value="دسته 3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="تلویزیون" Value="تلویزیون"></asp:MenuItem>
+                                                </Items>
+                                            </asp:Menu>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img alt="" src="image/menu_title_bg.gif" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:Login ID="Login1" runat="server" VisibleWhenLoggedIn="False" 
+                                                onloggedin="Login1_LoggedIn">
+                                            </asp:Login>
+                                            <br />
+                                            <asp:LoginView ID="LoginView1" runat="server">
+                                                <LoggedInTemplate>
+                                                    کاربر
+                                                    <asp:LoginName ID="LoginName1" runat="server" />
+                                                    &nbsp;خوش آمدید<br />
+                                                    <br />
+                                                    <asp:LinkButton ID="LinkButton5" runat="server" Font-Underline="False" 
+                                                        PostBackUrl="~/profile.aspx">ورود به پروفایل شخصی</asp:LinkButton>
+                                                </LoggedInTemplate>
+                                                <AnonymousTemplate>
+                                                    کاربر مهمان
+                                                </AnonymousTemplate>
+                                            </asp:LoginView>
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <br />
+                                            <asp:LoginStatus ID="LoginStatus1" runat="server" LoginText="ورود" 
+                                                LogoutText="خروج" />
+                                            <br />
+                                            <br />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:GridView ID="GridView1" runat="server">
+                                            </asp:GridView>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="vertical-align: top">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                    <p>
+                                    </p>
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div align="left" dir="rtl" style="font-family: tahoma">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:LinkButton ID="LinkButton7" runat="server" Font-Underline="False">صفحه اصلی</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:LinkButton ID="LinkButton8" runat="server" Font-Underline="False">درباره 
+                        سایت</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:LinkButton ID="LinkButton9" runat="server" Font-Underline="False">محصولات</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:LinkButton ID="LinkButton10" runat="server" Font-Underline="False">اخبار</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:LinkButton ID="LinkButton11" runat="server" Font-Underline="False">جستجو</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:LinkButton ID="LinkButton12" runat="server" Font-Underline="False">تماس با 
+                        ما</asp:LinkButton>
+                        <br />
+                    <div align="center" dir="rtl" style="font-family: tahoma">
+                        تمام حقوق مادی و معنوی سایت محفوظ است.</div>
+                    </div>
+                    </td>
+            </tr>
+        </table>
+    
+        
+    </div>
+    
+    </form>
+    </body>
+</html>
